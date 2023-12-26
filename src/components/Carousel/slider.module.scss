@@ -1,0 +1,12 @@
+.customClass {
+  :global {
+    .slick-prev {
+      background: red;
+    }
+
+    .slick-next {
+      background: green;
+    }
+  }
+
+}
