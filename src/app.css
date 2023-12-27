@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    font-family: 'Malgun Gothic', monospace;
 
     body {
         height: 100%;
@@ -9,4 +10,3 @@ html {
 #root {
     height: 100%;
 }
-

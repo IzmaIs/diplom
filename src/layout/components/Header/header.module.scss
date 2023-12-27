@@ -22,6 +22,17 @@
     flex-direction: row;
     justify-content: center;
     flex: 1;
+
+    input {
+      flex: 1;
+      outline: none;
+      padding-right: 20px;
+      padding-left: 40px;
+      border: 1px solid #8168F0;
+      border-radius: 30px;
+      height: 36px;
+      width: 13em;
+    }
   }
 
   .buttons {
@@ -31,5 +42,17 @@
     flex-direction: row;
     justify-content: flex-end;
     flex: 1;
+
+    button {
+      background: #8168F0;
+      border: none;
+      cursor: pointer;
+      border-radius: 36%;
+      display: flex;
+      height: 40px;
+      width: 40px;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
