@@ -1,6 +1,6 @@
 import classes from "./main.module.scss";
 import { Carousel } from "../components";
-import { NewsCard } from "../commons";
+import { NewsCard, ProductCard } from "../commons";
 
 const test = [
   {
@@ -60,6 +60,45 @@ const test = [
   },
 ];
 
+const test2 = [
+  {
+    id: 1,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  },
+  {
+    id: 2,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  },
+  {
+    id: 3,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  },
+  {
+    id: 4,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  }, {
+    id: 5,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  }, {
+    id: 6,
+    name: "Название колес",
+    price: "2",
+    icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
+  },
+
+
+];
+
 export const Main = () => {
   return (
     <div className={classes.container}>
@@ -71,7 +110,9 @@ export const Main = () => {
       </div>
       <div>
         <h1>Товары</h1>
-        <Carousel />
+        <Carousel items={test2.map(i => (
+          <ProductCard колесard key={i.id} name={i.name} price={i.price} iconPath={i.icon} />
+        ))} />
       </div>
       <div>
         <h1>Статистика</h1>
