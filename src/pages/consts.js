@@ -1,91 +1,48 @@
-import { getRandomNumber } from "../commons";
-
-export const getDataForStatistic = (currentYear) => {
-  return [
-    {
-      "name": `01.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `02.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `03.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `04.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `05.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `06.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `07.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `08.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `09.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `10.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `11.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-    {
-      "name": `12.${currentYear}`,
-      "sum": getRandomNumber(),
-    },
-  ];
-};
-
 export const products = [
   {
     id: 1,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 1",
+    price: "10",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   },
   {
     id: 2,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 2",
+    price: "12",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   },
   {
     id: 3,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 3",
+    price: "24",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   },
   {
     id: 4,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 4",
+    price: "55",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   }, {
     id: 5,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 5",
+    price: "34",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   }, {
     id: 6,
-    name: "Название колес",
-    price: "2",
+    name: "Товар 6",
+    price: "66",
+    allSumSold: "",
+    qrcode: "icons/qrcode.png",
     icon: "https://cdn.eapteka.ru/upload/offer_photo/511/521/resized/230_230_1_eed1ef45c3cdca2097bcefb16799f900.png?t=1627555973&_cvc=1703583171",
   },
 ];

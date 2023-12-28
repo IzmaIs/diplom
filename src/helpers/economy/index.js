@@ -1,0 +1,10 @@
+export { getRandomNumber } from "./getRandomNumber";
+export { getClearCashForStatistic } from "./getClearCashForStatistic";
+export { getValCashForStatistic } from "./getValCashForStatistic";
+export { getRandomColor } from "./getRandomColor";
+export { getDoseValCash } from "./getDoseValCash";
+export { getMidResultMarkup } from "./getMidResultMarkup";
+export { getSoldProducts } from "./getSoldProducts";
+export { getBuyersCount } from "./getBuyersCount";
+export { getFulledCheck } from "./getFulledCheck";
+export { getMidCheck } from "./getMidCheck";

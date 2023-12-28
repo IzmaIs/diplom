@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
   "bracketSameLine": false,
-  "bracketSpacing": true,
+  "bracketSpacing": false,
   "semi": true,
   "experimentalTernaries": false,
   "singleQuote": false,
@@ -13,7 +13,7 @@
   "vueIndentScriptAndStyle": false,
   "proseWrap": "preserve",
   "insertPragma": false,
-  "printWidth": 121,
+  "printWidth": 90,
   "requirePragma": false,
   "tabWidth": 2,
   "useTabs": false,

@@ -6,7 +6,11 @@
   position: sticky;
   top: 0;
   padding: 1% 10%;
+  @media (max-width: 1024px) {
+    padding: 1% 2%;
+  }
   background: white;
+  z-index: 1;
 
   .title {
     gap: 12px;
