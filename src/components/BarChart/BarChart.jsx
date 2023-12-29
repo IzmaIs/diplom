@@ -8,9 +8,9 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { getRandomColor } from "../../helpers/economy";
+import { getRandomColor } from "../../helpers";
 
-export const BarChart = ({ data, caption }) => {
+export const BarChart = ({ data, name, caption, measurementValue = "%" }) => {
   return (<ResponsiveContainer width="100%" height={350}>
     <OriginalBarChart
       width={500}
@@ -23,9 +23,9 @@ export const BarChart = ({ data, caption }) => {
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
-      <Tooltip formatter={(value) => `${value}%`} />
+      <Tooltip formatter={(value) => `${value} ${measurementValue}`} />
       <Legend verticalAlign="top" height={50} formatter={() => caption} />
-      <Bar dataKey="value" fill={getRandomColor()} />
+      <Bar dataKey="value" name={name} fill={getRandomColor()} />
     </OriginalBarChart>
   </ResponsiveContainer>);
 };
