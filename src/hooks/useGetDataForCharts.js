@@ -5,7 +5,7 @@ export const useGetDataForCharts = (initialValue, currentYear) => {
 
   useEffect(() => {
     setValue(initialValue);
-  }, [currentYear, initialValue]);
+  }, [currentYear]);
 
   return {value};
 };
