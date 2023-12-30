@@ -30,21 +30,6 @@ const responsiveConfig = [
 ];
 
 export const Carousel = ({items}) => {
-  const Next = (props) => {
-    return (
-      <div style={{background: "red"}} onClick={props.onClick}>
-        next
-      </div>
-    );
-  };
-  const Prev = (props) => {
-    return (
-      <div style={{background: "red"}} onClick={props.onClick}>
-        next
-      </div>
-    );
-  };
-
   return (
     <div style={{paddingLeft: "25px", paddingRight: "25px"}}>
       <Slider

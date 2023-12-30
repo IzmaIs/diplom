@@ -58,7 +58,7 @@ export const Header = () => {
         <div className={classes.searchBlock} ref={ref2}>
           {memoProduct
             .filter((i) => i.name.includes(searchValue))
-            .map((i, index, arr) => {
+            .map((i) => {
               return (
                 isOpen && (
                   <ProductCard
