@@ -2,11 +2,20 @@
   :global {
     .slick-prev {
       background: red;
+      border-radius: 50%;
+
+      &:before {
+        line-height: 1.1;
+      }
     }
 
     .slick-next {
       background: green;
+      border-radius: 50%;
+
+      &:before {
+        line-height: 1.1;
+      }
     }
   }
-
 }

@@ -1,7 +1,6 @@
-import { getRandomNumber } from "./getRandomNumber";
+import {getRandomNumber} from "./getRandomNumber";
 
 export const getMidResultMarkup = (currentYear) => {
-
   const TO = getRandomNumber(3000, 500);
 
   return [

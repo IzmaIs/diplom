@@ -1,1 +1,3 @@
-export { getProducts } from "./getProducts";
+export {getProducts} from "./getProducts";
+export {getXyzStatistic} from "./getXyzStatistic";
+export {getProductsWithStatistic} from "./getProductsWithStatistic";

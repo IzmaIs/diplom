@@ -1,1 +1,1 @@
-export { useGetDataForCharts } from "./useGetDataForCharts";
+export {useGetDataForCharts} from "./useGetDataForCharts";
