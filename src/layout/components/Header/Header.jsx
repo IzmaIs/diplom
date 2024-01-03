@@ -1,10 +1,10 @@
 import classes from "./header.module.scss";
 import {NavLink} from "react-router-dom";
 import {usePageProvider} from "../../../Providers";
-import {useEffect, useRef, useState} from "react";
+import {memo, useEffect, useRef, useState} from "react";
 import {Modal, ProductCard} from "../../../commons";
 
-export const Header = () => {
+export const Header = memo(() => {
   const {memoProduct, user, memoSetUser} = usePageProvider();
   const [searchValue, setSearchValue] = useState();
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -57,7 +57,7 @@ export const Header = () => {
         </div>
         <div className={classes.searchBlock} ref={ref2}>
           {memoProduct
-            .filter((i) => i.name.includes(searchValue))
+            .filter((i) => i.name.toLowerCase().includes(searchValue?.toLowerCase()))
             .map((i) => {
               return (
                 isOpen && (
@@ -128,4 +128,4 @@ export const Header = () => {
       </div>
     </div>
   );
-};
+});
