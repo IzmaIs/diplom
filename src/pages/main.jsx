@@ -1,11 +1,5 @@
 import classes from "./main.module.scss";
-import {
-  BarChart,
-  Carousel,
-  OneLineChart,
-  PieChartForAbcAnalysis,
-  PieChartForXyzAnalysis,
-} from "../components";
+import {BarChart, Carousel, OneLineChart, PieChartForAbcAnalysis, PieChartForXyzAnalysis} from "../components";
 import {NewsCard, ProductCard} from "../commons";
 import {news} from "./consts";
 import {usePageProvider} from "../Providers";
@@ -15,8 +9,6 @@ const curYear = new Date().getFullYear();
 export const Main = () => {
   const {
     memoProduct,
-    currentYear,
-    memoSetCurrentYear,
     clearCash,
     valCash,
     dosValCash,
@@ -28,6 +20,8 @@ export const Main = () => {
     memoSetAbcAnalysis,
     abcAnalysis,
     user,
+    line,
+    memoLine,
   } = usePageProvider();
 
   return (
@@ -58,51 +52,53 @@ export const Main = () => {
         <div>
           <div className={classes.statistic}>
             <h1>Статистика</h1>
-            <input
-              type="number"
-              min="1900"
-              max={curYear}
-              step="1"
-              value={currentYear}
-              onChange={(e) => memoSetCurrentYear(+e.target.value)}
-            />
           </div>
           <div className={classes.charts}>
             <OneLineChart name={`Товарооборот`} data={clearCash} />
             <OneLineChart name={`Валовая прибль`} data={valCash} />
+            <div className={classes.bars}>
+              Включить вспомогательную ось на гистограммах
+              <input type="checkbox" value={line} onChange={(e) => memoLine(!line)} />
+            </div>
             <BarChart
               data={dosValCash}
               caption={"Доля валовой прибыли"}
               name={`Доля валовой прибыли`}
+              line={line}
             />
             <BarChart
               data={midResultMarkup}
               caption={"Средняя реализованная наценка"}
               name={`Средняя реализованная наценка`}
+              line={line}
             />
             <BarChart
               data={soldProducts}
               caption={"Количество проданного товара"}
               measurementValue={"Шт."}
               name={`Количество проданного товара`}
+              line={line}
             />
             <BarChart
               data={buyersCount}
               caption={"Количество чеков(покупателей)"}
               name={`Количество чеков(покупателей)`}
               measurementValue={"Шт."}
+              line={line}
             />
             <BarChart
               data={midCheck}
               caption={"Средний чек"}
               name={`Средний чек`}
               measurementValue={"Руб."}
+              line={line}
             />
             <BarChart
               data={checkFulled}
               caption={"Наполняемость чека"}
               name={`Наполняемость чека`}
               measurementValue={"Шт."}
+              line={line}
             />
             <div className={classes.pieChart}>
               <h3>ABC анализ</h3>

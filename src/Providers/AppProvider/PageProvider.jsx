@@ -14,7 +14,7 @@ import {
   getValCashForStatistic,
 } from "../../helpers";
 
-const curYear = new Date().getFullYear();
+const curYear = 2023;
 const users = [
   {
     id: 1,
@@ -26,6 +26,7 @@ const users = [
 export const PageProvider = ({children}) => {
   const [currentYear, setCurrentYear] = useState(curYear);
   const [abcAnalysis, setAbcAnalysis] = useState("price");
+  const [line, setLine] = useState(false);
 
   const [user, setUser] = useState();
   const {value: clearCash} = useGetDataForCharts(
@@ -42,7 +43,7 @@ export const PageProvider = ({children}) => {
   const {value: buyersCount} = useGetDataForCharts(getBuyersCount(currentYear), currentYear);
   const {value: midCheck} = useGetDataForCharts(getMidCheck(currentYear), currentYear);
   const {value: checkFulled} = useGetDataForCharts(getFulledCheck(currentYear), currentYear);
-  console.log(user);
+
   const memoSetUser = useCallback((info) => {
     const trueUser = users.find((i) => i.login === info?.login && i.password === info.password);
 
@@ -71,6 +72,10 @@ export const PageProvider = ({children}) => {
   const memoProduct = useMemo(() => {
     return getProductsWithStatistic(products);
   }, [products]);
+
+  const memoLine = useCallback((val) => {
+    setLine(val);
+  }, []);
 
   useLayoutEffect(() => {
     const login = localStorage.getItem("login");
@@ -101,24 +106,10 @@ export const PageProvider = ({children}) => {
 
       user,
       memoSetUser,
+      line,
+      memoLine,
     };
-  }, [
-    user,
-    memoSetUser,
-    abcAnalysis,
-    buyersCount,
-    checkFulled,
-    clearCash,
-    currentYear,
-    dosValCash,
-    memoProduct,
-    memoSetAbcAnalysis,
-    memoSetCurrentYear,
-    midCheck,
-    midResultMarkup,
-    soldProducts,
-    valCash,
-  ]);
+  }, [clearCash, valCash, dosValCash, midResultMarkup, soldProducts, buyersCount, midCheck, checkFulled, memoProduct, currentYear, memoSetCurrentYear, abcAnalysis, memoSetAbcAnalysis, user, memoSetUser, line, memoLine]);
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };
